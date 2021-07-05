@@ -1,0 +1,27 @@
+ALGORITHM READ A SENTENCE
+VAR
+   vcount:INTEGER:=1
+   wcount:INTEGER:=1
+   ccount :INTEGER:=0
+   vowel_list:CHAR:='aeiouAEIOU'
+   x:CHAR:=''
+   +
+BEGIN
+WHILE (x <> '.') DO
+ READ(x)
+ IF (x <> ' ') THEN
+ ccount:= ccount+1
+ END_IF 
+ IF ( x = ' ') THEN
+ wcount:= wcount+1
+ END_IF
+   
+IF (x=a OR x=e OR  x=i OR x=o OR  x=u OR  x=A OR  x=E OR  x=I OR  x=O OR  x=U) THEN
+  vcount:= vcount+1
+  END_IF
+END_WHILE
+ Write ("the number of characters is" , ccount)
+  Write ("The number of words is" , wcount)
+ Write ("The number of vowels is" , vcount)
+END
+
